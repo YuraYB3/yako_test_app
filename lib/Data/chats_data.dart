@@ -11,7 +11,8 @@ var CHATS_LIST = [
       lastMessage: "It`s okay",
       lastMessageTime: "14:48",
       isMarked: true,
-      markColor: Colors.black,
+      markColor: Colors.yellow,
+      markTextColor: Colors.black,
       mark: 'Work'),
   ChatModel(
       userPicture:
@@ -22,6 +23,7 @@ var CHATS_LIST = [
       lastMessageTime: "Now",
       isMarked: true,
       markColor: Colors.red,
+      markTextColor: Colors.white,
       mark: 'Friends'),
   ChatModel(
       userPicture: "https://static.dw.com/image/19055840_804.jpg",
@@ -31,15 +33,17 @@ var CHATS_LIST = [
       lastMessageTime: "Yesterday",
       isMarked: false),
   ChatModel(
-      userPicture:
-          "https://media.cnn.com/api/v1/images/stellar/prod/210707164757-louisiana-python-escape-file.jpg?q=x_0,y_518,h_1600,w_1600,c_crop",
-      chatName: "Python",
-      lastSender: "Python",
-      lastMessage: "Can I hug you?",
-      lastMessageTime: "Yesterday",
-      isMarked: true,
-      mark: 'Do Not Open!',
-      markColor: Colors.red),
+    userPicture:
+        "https://media.cnn.com/api/v1/images/stellar/prod/210707164757-louisiana-python-escape-file.jpg?q=x_0,y_518,h_1600,w_1600,c_crop",
+    chatName: "Python",
+    lastSender: "Python",
+    lastMessage: "Can I hug you?",
+    lastMessageTime: "Yesterday",
+    isMarked: true,
+    mark: 'Do Not Open!',
+    markColor: Colors.red,
+    markTextColor: Colors.white,
+  ),
   ChatModel(
       userPicture:
           "https://i.natgeofe.com/k/0a512abe-65d0-4330-9a08-d68e21bf7aad/cicada-grass_square.jpg",

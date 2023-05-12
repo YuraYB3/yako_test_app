@@ -78,8 +78,8 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                     const Positioned(
-                      top: 7,
-                      left: 6,
+                      top: 6,
+                      left: 5.5,
                       child: Icon(
                         Icons.add,
                         size: 20,
@@ -102,6 +102,10 @@ class _MyAppState extends State<MyApp> {
       onTap: onTabTapped,
       currentIndex: _currentIndex,
       selectedItemColor: Colors.pink,
+      unselectedItemColor: AppThemeColor.mainColor,
+      iconSize: 28,
+      selectedFontSize: 12,
+      unselectedFontSize: 12,
       elevation: 5.0,
       selectedLabelStyle:
           const TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.bold),
@@ -111,15 +115,21 @@ class _MyAppState extends State<MyApp> {
           color: Color.fromARGB(255, 11, 71, 95)),
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.chat_bubble),
+          icon: Icon(
+            CupertinoIcons.chat_bubble,
+          ),
           label: 'Chat',
         ),
         BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.bell),
+          icon: Icon(
+            CupertinoIcons.bell,
+          ),
           label: 'Notifications',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.more_horiz),
+          icon: Icon(
+            Icons.more_horiz,
+          ),
           label: 'More',
         ),
       ],
