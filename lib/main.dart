@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/Shared/constants.dart';
 
+import 'Screens/chatScreen.dart';
+import 'Screens/notificationScreen.dart';
+import 'Screens/settingsScreen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,12 +19,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _currentIndex = 0;
+  final List<Widget> _screens = [
+    const ChatsScreen(),
+    const NotificationScreen(),
+    const SettingsScreen()
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
       appBar: userAppBar(),
       bottomNavigationBar: userBottomBar(),
+      body: _screens[_currentIndex],
     ));
   }
 
