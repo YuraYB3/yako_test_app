@@ -29,11 +29,29 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: userAppBar(),
-      bottomNavigationBar: userBottomBar(),
-      body: _screens[_currentIndex],
-    ));
+      home: Scaffold(
+        appBar: userAppBar(),
+        body: _screens[_currentIndex],
+        bottomNavigationBar: LayoutBuilder(
+          builder: (context, constraints) {
+            return Stack(
+              children: [
+                userBottomBar(),
+                Positioned(
+                  left: 0,
+                  top: 0,
+                  child: Container(
+                    width: constraints.maxWidth / 3,
+                    height: 2,
+                    color: Colors.pink,
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
   }
 
   AppBar userAppBar() {
@@ -68,9 +86,7 @@ class _MyAppState extends State<MyApp> {
                   size: 32,
                 ),
               ),
-              onPressed: () {
-                // Обробник натискання кнопки повідомлень
-              },
+              onPressed: () {},
             ))
       ],
     );
