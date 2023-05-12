@@ -63,34 +63,13 @@ class _MyAppState extends State<MyApp> {
               icon: Transform(
                 alignment: Alignment.center,
                 transform: Matrix4.rotationY(pi),
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Transform.scale(
-                        scale: 1,
-                        child: const Icon(
-                          CupertinoIcons.chat_bubble,
-                          size: 32,
-                        ),
-                      ),
-                    ),
-                    const Positioned(
-                      top: 6,
-                      left: 5.5,
-                      child: Icon(
-                        Icons.add,
-                        size: 20,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
+                child: const Icon(
+                  Icons.maps_ugc_sharp,
+                  size: 32,
                 ),
               ),
               onPressed: () {
-                print('clicked!!!');
+                // Обробник натискання кнопки повідомлень
               },
             ))
       ],
@@ -106,7 +85,6 @@ class _MyAppState extends State<MyApp> {
       iconSize: 28,
       selectedFontSize: 12,
       unselectedFontSize: 12,
-      elevation: 5.0,
       selectedLabelStyle:
           const TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.bold),
       unselectedLabelStyle: const TextStyle(
@@ -115,8 +93,11 @@ class _MyAppState extends State<MyApp> {
           color: Color.fromARGB(255, 11, 71, 95)),
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(
-            CupertinoIcons.chat_bubble,
+          icon: SizedBox(
+            height: 40,
+            child: Icon(
+              Icons.sms_outlined,
+            ),
           ),
           label: 'Chat',
         ),
