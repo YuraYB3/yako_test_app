@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/Shared/constants.dart';
 
-import 'Screens/chatScreen.dart';
-import 'Screens/notificationScreen.dart';
-import 'Screens/settingsScreen.dart';
+import 'Screens/chat_Screen.dart';
+import 'Screens/notification_screen.dart';
+import 'Screens/settings_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -10,23 +10,28 @@ class SearchBarPanel {
         height: 48,
         child: TextField(
           decoration: InputDecoration(
-              fillColor: Colors.white,
-              contentPadding: const EdgeInsets.only(bottom: 5),
-              labelStyle: const TextStyle(color: Colors.grey),
-              hintText: 'Search...',
-              prefixIcon: const Icon(
-                Icons.search,
-                color: Colors.black,
-                size: 28,
-              ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              disabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: AppThemeColor.secondColor),
-              ),
-              enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black))),
+            contentPadding: const EdgeInsets.only(bottom: 5),
+            labelStyle: const TextStyle(color: Colors.grey),
+            hintText: 'Search...',
+            prefixIcon: const Icon(
+              Icons.search,
+              color: Colors.black,
+              size: 28,
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            disabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: AppThemeColor.secondColor),
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.black),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: AppThemeColor.secondColor),
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
         ),
       ),
     );
