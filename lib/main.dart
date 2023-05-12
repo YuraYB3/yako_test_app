@@ -14,9 +14,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(appBar: userAppBar()));
+    return MaterialApp(
+        home: Scaffold(
+      appBar: userAppBar(),
+      bottomNavigationBar: userBottomBar(),
+    ));
   }
 
   AppBar userAppBar() {
@@ -51,5 +56,40 @@ class _MyAppState extends State<MyApp> {
         )
       ],
     );
+  }
+
+  BottomNavigationBar userBottomBar() {
+    return BottomNavigationBar(
+      onTap: onTabTapped,
+      currentIndex: _currentIndex,
+      selectedItemColor: Colors.pink,
+      elevation: 5.0,
+      selectedLabelStyle:
+          const TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.bold),
+      unselectedLabelStyle: const TextStyle(
+          fontFamily: 'Raleway',
+          fontWeight: FontWeight.bold,
+          color: Color.fromARGB(255, 11, 71, 95)),
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(CupertinoIcons.chat_bubble),
+          label: 'Chat',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(CupertinoIcons.bell),
+          label: 'Notifications',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.more_horiz),
+          label: 'More',
+        ),
+      ],
+    );
+  }
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
   }
 }
