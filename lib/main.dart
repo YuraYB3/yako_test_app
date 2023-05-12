@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/Shared/constants.dart';
@@ -56,14 +58,41 @@ class _MyAppState extends State<MyApp> {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(right: 10.0),
-          child: IconButton(
-            icon: const Icon(CupertinoIcons.plus_bubble),
-            onPressed: () {
-              print('clicked!');
-            },
-          ),
-        )
+            padding: const EdgeInsets.only(right: 10.0),
+            child: IconButton(
+              icon: Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.rotationY(pi),
+                child: Stack(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Transform.scale(
+                        scale: 1,
+                        child: const Icon(
+                          CupertinoIcons.chat_bubble,
+                          size: 32,
+                        ),
+                      ),
+                    ),
+                    const Positioned(
+                      top: 7,
+                      left: 6,
+                      child: Icon(
+                        Icons.add,
+                        size: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              onPressed: () {
+                print('clicked!!!');
+              },
+            ))
       ],
     );
   }
