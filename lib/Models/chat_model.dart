@@ -10,6 +10,9 @@ class ChatModel {
   Color? markColor;
   Color? markTextColor;
   String? mark;
+  bool isThatGroupChat;
+  List<String>? groupMembers;
+  List<String>? groupMembersPhoto;
 
   ChatModel(
       {required this.userPicture,
@@ -18,7 +21,10 @@ class ChatModel {
       required this.lastMessage,
       required this.lastMessageTime,
       required this.isMarked,
+      required this.isThatGroupChat,
       this.markColor,
       this.markTextColor,
-      this.mark});
+      this.mark,
+      this.groupMembers,
+      this.groupMembersPhoto});
 }

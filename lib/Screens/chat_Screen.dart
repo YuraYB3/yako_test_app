@@ -11,6 +11,7 @@ class ChatsScreen extends StatefulWidget {
 }
 
 class _ChatsScreenState extends State<ChatsScreen> {
+  ChatsBuilder chatsBuilder = ChatsBuilder();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,7 +26,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
             ],
           ),
         ),
-        Expanded(child: ChatsBuilder.ChatBuilderWidget())
+        Expanded(child: chatsBuilder.ChatBuilderWidget())
       ],
     );
   }
