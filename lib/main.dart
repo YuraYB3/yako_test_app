@@ -91,23 +91,24 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'Raleway',
           fontWeight: FontWeight.bold,
           color: Color.fromARGB(255, 11, 71, 95)),
-      items: const [
+      items: [
         BottomNavigationBarItem(
           icon: SizedBox(
-            height: 40,
-            child: Icon(
-              Icons.sms_outlined,
-            ),
-          ),
+              height: 40,
+              child: Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.rotationY(pi),
+                child: const Icon(Icons.sms_outlined),
+              )),
           label: 'Chat',
         ),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: Icon(
             CupertinoIcons.bell,
           ),
           label: 'Notifications',
         ),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: Icon(
             Icons.more_horiz,
           ),
